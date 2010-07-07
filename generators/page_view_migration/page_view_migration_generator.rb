@@ -8,8 +8,8 @@ class PageViewMigrationGenerator < Rails::Generator::Base
 private 
   def page_view_migration_local_assigns 
     returning(assigns = {}) do  
-      assigns[:migration_name] = 'create_page_views'
-      assigns[:table_name] = 'page_views' 
+      assigns[:migration_name] = 'CreatePageViews'
+      assigns[:table_name] = 'page_views'
       assigns[:attributes] = [
         Rails::Generator::GeneratedAttribute.new('object_type','string'),
         Rails::Generator::GeneratedAttribute.new('object_id','integer'),
