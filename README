@@ -16,7 +16,8 @@ Example
 
 First, create the model
  
-  rake db:migrate:page_views
+  script/generate page_view_migration
+  rake db:migrate
 
 
 Then, in your controller:
