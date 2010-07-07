@@ -12,28 +12,28 @@ This is a simple page view tracker for Rails. Features:
 Example
 =======
 
-  script/plugin install git://github.com/leonid-shevtsov/page_visit_tracker.git
+    script/plugin install git://github.com/leonid-shevtsov/page_visit_tracker.git
 
 First, create the model
  
-  script/generate page_view_migration
-  rake db:migrate
+    script/generate page_view_migration
+    rake db:migrate
 
 
 Then, in your controller:
 
-  class PostsController
-    def show
-      #...
-      track_page_view(@post)
+    class PostsController
+      def show
+        #...
+        track_page_view(@post)
+      end
     end
-  end
 
 Then you can use it in your models like
 
-  class Post
-    has_many :page_views, :polymorphic => true, :dependent => :destroy
-  end
+    class Post
+      has_many :page_views, :polymorphic => true, :dependent => :destroy
+    end
 
 
 TODO
