@@ -1,1 +1,1 @@
-# Include hook code here
+require 'page_visit_tracker'
